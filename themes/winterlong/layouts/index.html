@@ -1,0 +1,21 @@
+<div class="index">
+  {{ partial "header.html" . }}
+  <div class="row">
+    <div class="column">
+      <div class="articles">
+        <div class="row">
+          {{ range $key, $value := .Paginator.Pages }}
+          <div class="column-1">
+            <a href="{{ .Permalink }}">
+              <div class="detail">
+                <h2 class="title">{{ .Title }}</h2>
+              </div>
+            </a>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+  {{ partial "header.html" . }}
+</div>
